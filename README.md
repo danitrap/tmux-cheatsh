@@ -10,10 +10,40 @@ A simple TMux plugin that provides quick access to [cheat.sh](https://cheat.sh/)
 
 ## Installation
 
+### Installation via tpm
+
 Add this to your `.tmux.conf`:
 
 ```bash
 set -g @plugin 'danitrap/tmux-cheatsh'
+```
+
+Reload TMux configuration:
+
+```bash
+tmux source-file ~/.tmux.conf
+```
+
+And press `<prefix> + I` to fetch the plugin.
+
+### Installation via git
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/danitrap/tmux-cheatsh.git ~/.tmux/plugins/tmux-cheatsh
+```
+
+2. Add this line to your `.tmux.conf`:
+
+```bash
+run-shell ~/.tmux/plugins/tmux-cheatsh/tmux-cheatsh.tmux
+```
+
+3. Reload TMux configuration:
+
+```bash
+tmux source-file ~/.tmux.conf
 ```
 
 ## Usage
