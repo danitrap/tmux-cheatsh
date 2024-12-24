@@ -47,6 +47,21 @@ run-shell ~/.tmux/plugins/tmux-cheatsh/tmux-cheatsh.tmux
 tmux source-file ~/.tmux.conf
 ```
 
+## Configuration
+
+Customize the plugin behavior in your `.tmux.conf`:
+
+```bash
+# Change default keybinding (default: prefix + C)
+set -g @cheatsh-key 'C'
+
+# Set split direction (default: 'h' for horizontal)
+set -g @cheatsh-split 'v'  # 'v' for vertical, 'h' for horizontal
+
+# Set split size percentage (default: 50)
+set -g @cheatsh-split-size '40'
+```
+
 ## Usage
 
 1. Press `<prefix> + C` to activate the plugin
@@ -57,9 +72,51 @@ tmux source-file ~/.tmux.conf
 
 The script will fetch and display programming language references, command examples, and code snippets from cheat.sh.
 
+### Examples
+
+Common search patterns:
+
+```bash
+# Python specific queries
+python/list comprehension  # List comprehension examples
+python/dict                # Dictionary operations
+python/:learn              # Python learning guide
+
+# Git operations
+git/stash                  # Git stash commands
+git/rebase                 # Git rebase guide
+
+# Linux commands
+find                       # Find command examples
+awk                        # Awk usage guide
+```
+
 ## Features
 
 - Interactive topic filtering
 - TMux-aware (splits window when in TMux session)
 - Paged output for better readability
 - Works standalone or within TMux
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch:
+
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+3. Commit your changes:
+
+   ```bash
+   git commit -m 'Add some amazing feature'
+   ```
+
+4. Push to the branch:
+
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+5. Open a Pull Request
