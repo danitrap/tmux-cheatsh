@@ -7,6 +7,7 @@ A simple TMux plugin that provides quick access to [cheat.sh](https://cheat.sh/)
 - [gum](https://github.com/charmbracelet/gum)
 - curl
 - tmux
+- jq
 
 ## Installation
 
